@@ -7,7 +7,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= (@bug.user.try(:fname) + ' ' + @bug.user.try(:lname) || "NA")%>
+  <%= (@bug.user.try(:fname).try(:lname) || "NA")%>
 </p>
 
 <p>
